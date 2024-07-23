@@ -7,12 +7,10 @@
 # @lc code=start
 class Solution:
     def containsDuplicate(self, nums: list[int]) -> bool:
-        dic = {}
+        dic = set()
         for i in nums:
-            dic[i] = 0
-        for i in nums:
-            dic[i] += 1
-            if dic[i] == 2:
+            if i in dic:
                 return True
+            dic.add()
         return False        
 # @lc code=end
