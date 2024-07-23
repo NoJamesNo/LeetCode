@@ -7,24 +7,19 @@
 # @lc code=start
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
+        if len(s) != len(t):
+            return False
         dic = {}
-        first_size = 0
+        
         for i in s:
-            first_size += 1
-            if dic.get(i):
-                dic[i] += 1
-            else:
-                dic[i] = 1
+            dic[i] = dic.get(i, 0 ) + 1
         for i in t:
-            first_size -= 1
             if dic.get(i):
                 dic[i] -= 1
                 if dic[i] == -1:
                     return False
             else:
                 return False
-        if first_size == 0:
-            return True
-        return False
+        return True
 # @lc code=end
 
