@@ -37,6 +37,8 @@ class Solution:
             row_dict = set()
                 
         return True
+    
+#note you can do integer divison with //
                 
         
 # @lc code=end
